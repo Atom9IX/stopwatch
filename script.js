@@ -1,3 +1,4 @@
+// * Node elements
 const stopWatchContainerNode = document.querySelector(".stopwatch-container");
 const startBtnNode = document.querySelector(".start-btn");
 const stopBtnNode = document.querySelector(".stop-btn");
@@ -10,6 +11,7 @@ let stopwatch = {
   stopStatus: true,
 };
 
+// * Functions
 function render() {
   stopWatchContainerNode.textContent = `${stopwatch.hours} : ${stopwatch.minutes} : ${stopwatch.seconds}`;
 }
@@ -47,6 +49,7 @@ function resetStopwatch() {
   stopwatch.stopStatus = true;
 }
 
+// * Event listeners
 startBtnNode.addEventListener("click", e => {
   start();
 })
